@@ -1,0 +1,4 @@
+coveragereport
+HtmlViewerApp.Tests/TestResults
+# HtmlViewerApp.API/bin
+# HtmlViewerApp.API/obj
