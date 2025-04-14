@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/HtmlViewerApp.API.props" />
+</Project>

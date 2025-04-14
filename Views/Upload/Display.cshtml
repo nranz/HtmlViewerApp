@@ -1,8 +1,0 @@
-@{
-    ViewData["Title"] = "View HTML";
-    var fileUrl = Url.Content($"~/uploads/{ViewBag.FileName}");
-}
-
-<h2>HTML Preview</h2>
-
-<iframe src="@fileUrl" style="width: 100%; height: 600px; border: none;"></iframe>
