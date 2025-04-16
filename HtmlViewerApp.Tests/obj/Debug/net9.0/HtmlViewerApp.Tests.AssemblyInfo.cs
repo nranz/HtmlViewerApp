@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HtmlViewerApp.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c4cbbf5cd4e0643a13b1bca1bec9b8409abb973")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a94a426077acccecbeb56e77b1e04032d9d41745")]
 [assembly: System.Reflection.AssemblyProductAttribute("HtmlViewerApp.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HtmlViewerApp.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

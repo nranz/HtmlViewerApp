@@ -1,0 +1,37 @@
+name: Pull Requests
+
+on:
+  pull_request:
+    branches:
+      - "main"
+
+env:
+  SOLUTION_FILE: ./HtmlViewerApp.sln
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: .net restore
+        run: dotnet restore ${{ env.SOLUTION_FILE }}
+
+      # - name: code style
+      #   run: dotnet format ${{ env.SOLUTION_FILE }} --no-restore --severity error --verify-no-changes
+
+      - name: .net test
+        run: dotnet test ${{ env.SOLUTION_FILE }} --no-restore --collect:"XPlat Code Coverage" --settings coverlet.runsettings.xml
+
+      - name: code coverage report
+        run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
+          reportgenerator -reports:"*.Tests/TestResults/*/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:TextSummary
+          more coveragereport/Summary.html
