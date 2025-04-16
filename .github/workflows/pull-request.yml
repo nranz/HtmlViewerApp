@@ -28,7 +28,7 @@ jobs:
       #   run: dotnet format ${{ env.SOLUTION_FILE }} --no-restore --severity error --verify-no-changes
 
       - name: .net test
-        run: dotnet test ${{ env.SOLUTION_FILE }} --no-restore --collect:"XPlat Code Coverage" --settings coverlet.runsettings.xml
+        run: dotnet test ${{ env.SOLUTION_FILE }} --no-restore --collect:"XPlat Code Coverage"
 
       - name: code coverage report
         run: |
